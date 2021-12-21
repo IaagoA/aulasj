@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        /* body{ */
+            /* background: rgba(0, 0, 0, 0.863);
+            color: whitesmoke;
+            font: normal 18pt Arial; */
+        /* } */
+        #msg{
+            font: normal 20pt Arial;
+            background-color: white;
+            color: rgb(7, 5, 5);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            border-radius: 20px;
+         border-style: solid;
+         border-color: hsl(240, 100%, 41%);
+         
+            
+        }
+        </style>
+</head>
+
+
+
+
+<body>
+<div id ="msg" >
+        clique aqui
+    <br>
+</div>
+<br>   
+<br>
+<img align = "center" alt = "GIF" src = "https://github.com/deut-erium/deut-erium/blob/master/assets/computer.gif?raw=1" width = "175vw" />
+    <script>
+        var a = window.document.getElementById('msg')
+        a.addEventListener('click',clicar)
+        a.addEventListener('mouseenter',entrar)
+        a.addEventListener('mouseout', sair)
+function clicar() {
+a.innerText = 'CLICOU!'
+a.style.background = 'hsl(240, 100%, 41%)'
+
+}
+function entrar() {
+     a.innerText = 'ENTROU!'
+     a.style.background = 'hsl(240, 100%, 41%)'
+}
+function sair(){
+a.innerText = 'SAIU!'
+a.style.background = 'white'
+}
+
+    </script>
+</body>
+</html>
