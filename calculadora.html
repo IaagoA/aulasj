@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+    <style>
+        input{
+        font: normal 18pt Arial;
+        width: 100px;
+        border-radius: 15px;
+        }
+        #res{
+    font: normal 20px Arial;
+        }
+        .bt{
+            text-decoration: none;
+            font: normal 18pt Arial;
+            color: blue;
+            background: white;
+            border-color: blue;
+            padding: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 15px;
+
+        }
+        .bt:hover{
+            background: blue;
+            color: white;
+        }
+        .links{ 
+            font: normal 20pt Arial;
+text-decoration: none;
+color: blue; 
+padding: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+border-radius: 8px;
+border: 2px solid;
+border-color: blue;
+}
+.links:hover{
+    background: blue;
+     color: white 
+  }  
+        </style>
+    
+</head>
+<body>
+    <h1>Somando valores </h1>
+    <input type"number" name "txtn1" id ="txtn1">
+    <input type"number" name "txtn2" id="txtn2">
+    <input type= "number" id ="demo" name "demo">
+    <button class="bt" onclick="somar()">Somar</button>
+    <button class="bt" onclick="copy()">copiar</button>
+    
+
+    <div id = "res">Resultado</div>
+        <script>
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById("res")
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2 
+            window.res.innerHTML = `A soma entre ${n1} e ${n2} e igual a ${s}`
+        }
+        function copiar(){
+            var textoCopiado = windou.document.getElementById("demo")
+            textoCopiado.select()
+            document.execCommand("copy")
+            alert(n("texto copiado: " + textoCopiado.value))
+        }
+        
+        </script>
+        <br>
+        <br>
+        <a class = "links" href = "index.html">inicio da pagina</a>
+</body>
+</html>
